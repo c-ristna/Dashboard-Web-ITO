@@ -63,8 +63,8 @@
             <input type="text" name="stok" required="" />
         </div>
         <div>
-            <label>Kategori</label>
-            <input type="text" name="kategori" required="" />
+            <label>Deskripsi</label>
+            <input type="text" name="deskripsi" required="" />
         </div>
         <div>
             <label>Status</label>
