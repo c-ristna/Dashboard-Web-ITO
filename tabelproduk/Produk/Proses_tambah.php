@@ -4,15 +4,16 @@
     $nama_produk = $_POST['nama_produk'];
     $harga = $_POST['harga'];
     $stok = $_POST['stok'];
-    $kategori = $_POST['kategori'];
+    $deskripsi = $_POST['deskripsi'];
     $status = $_POST['status'];
 
-    $query = "INSERT INTO produk (nama_produk, harga, stok, kategori, status) VALUES ('$nama_produk', '$harga', '$stok', '$kategori', '$status')";
+    $query = "INSERT INTO produk (nama_produk, harga, stok, deskripsi, status) VALUES ('$nama_produk', '$harga', '$stok', '$deskripsi', '$status')";
     $result = mysqli_query($koneksi, $query);
 
     if(!$result) {
         die("Query Error : ".mysqli_errno($koneksi)." - ".mysqli_error($koneksi));
     } else {
-        echo "<script>alert('Data berhasil ditambahkan!');window.location='Table.php';</script>";
+        $inserted_id = mysqli_insert_id($koneksi);
+        echo "<script>alert('Data berhasil ditambahkan dengan ID: $inserted_id!\\nKembali ke tabel produk?');window.location='Table.php';</script>";
     }
 ?>
