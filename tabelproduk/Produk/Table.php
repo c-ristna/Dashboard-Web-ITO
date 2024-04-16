@@ -52,7 +52,7 @@
                     <th>Nama Produk</th>
                     <th>Harga</th>
                     <th>Stok</th>
-                    <th>Kategori</th>
+                    <th>Deskripsi</th>
                     <th>Status</th>
                     <th style="text-align: center;">Aksi</th>
                   </p></th>
@@ -88,7 +88,7 @@
                             <td><?php echo $data['nama_produk']?></td>
                             <td>Rp<?php echo number_format($data['harga'], 0, ',', '.'); ?></td>
                             <td><?php echo $data['stok']?></td>
-                            <td><?php echo $data['kategori']?></td>
+                            <td><?php echo $data['deskripsi']?></td>
                             <td><?php echo $data['status']?></td>
                             <td style="text-align: center;">
                                 <a href="Edit_produk.php?id=<?php echo $row['id']; ?>">
