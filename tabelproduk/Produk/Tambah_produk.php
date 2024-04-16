@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Produk</title>
+    <title>Tambah Data Produk</title>
     <style type="text/css">
         * {
             font-family: "Trebuchet MS";
