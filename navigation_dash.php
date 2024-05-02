@@ -11,7 +11,7 @@
                 </li>
 
                 <li>
-                    <a href="#beranda">
+                    <a href="index.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -20,7 +20,7 @@
                 </li>
 
                 <li>
-                    <a href="#customer">
+                    <a href="konsumen/konsumen.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -29,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="#money">
+                    <a href="keuangan/keuangan.php">
                         <span class="icon">
                             <ion-icon name="cash-outline"></ion-icon>
                         </span>
@@ -38,7 +38,7 @@
                 </li>
 
                 <li>
-                    <a href="#product">
+                    <a href="produk/produk.php">
                         <span class="icon">
                             <ion-icon name="bag-handle-outline"></ion-icon>
                         </span>
@@ -47,7 +47,7 @@
                 </li>
 
                 <li>
-                    <a href="#product">
+                    <a href="penjualan/penjualan.php">
                         <span class="icon">
                             <ion-icon name="analytics-outline"></ion-icon>
                         </span>
@@ -56,7 +56,16 @@
                 </li>
 
                 <li>
-                    <a href="#logout">
+                <a href="admin/admin.php">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="title">Admin</span> 
+                </a>
+                </li>
+
+                <li>
+                    <a href="login/login.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -65,3 +74,7 @@
                 </li>
             </ul>
         </div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

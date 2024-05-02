@@ -2,7 +2,7 @@
                 <div class="recentOrders">
                     <div class="cardHeader">
                         <h2>Pesanan Terkini</h2>
-                        <a href="#" class="btn">Detail</a>
+                        <a href="#order" class="btn">Detail</a>
                     </div>
 
                     <table>

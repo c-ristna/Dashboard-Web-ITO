@@ -1,7 +1,6 @@
 /* =========== Google Fonts ============ */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
-
 /* =============== Globals ============== */
 * {
   font-family: "Poppins", poppins;
@@ -38,6 +37,7 @@ body {
   transition: 0.5s;
   overflow: hidden;
 }
+
 .navigation.active {
   width: 80px;
 }
@@ -93,6 +93,12 @@ body {
   font-size: 1.75rem;
 }
 
+.icon-inner, .ionicon, svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 .navigation ul li a .title {
   position: relative;
   display: block;
@@ -117,6 +123,7 @@ body {
   box-shadow: 35px 35px 0 10px var(--white);
   pointer-events: none;
 }
+
 .navigation ul li:hover a::after,
 .navigation ul li.hovered a::after {
   content: "";
@@ -140,6 +147,7 @@ body {
   background: var(--white);
   transition: 0.5s;
 }
+
 .main.active {
   width: calc(100% - 80px);
   left: 80px;
@@ -189,7 +197,7 @@ body {
 
 .search label ion-icon {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 10px;
   font-size: 1.2rem;
 }
@@ -254,164 +262,136 @@ body {
 .cardBox .card:hover {
   background: var(--blue);
 }
+
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
 .cardBox .card:hover .iconBx {
   color: var(--white);
 }
 
-/* ================== Order Details List ============== */
-.details {
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
-  /* margin-top: 10px; */
-}
-
-.details .recentOrders {
-  position: relative;
-  display: grid;
-  min-height: 500px;
-  background: var(--white);
-  padding: 20px;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-}
-
-.details .cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.cardHeader h2 {
-  font-weight: 600;
-  color: var(--blue);
-}
-.cardHeader .btn {
-  position: relative;
-  padding: 5px 10px;
-  background: var(--blue);
-  text-decoration: none;
-  color: var(--white);
-  border-radius: 6px;
-}
-
-.details table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-.details table thead td {
-  font-weight: 600;
-}
-.details .recentOrders table tr {
-  color: var(--black1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.details .recentOrders table tr:last-child {
-  border-bottom: none;
-}
-.details .recentOrders table tbody tr:hover {
-  background: var(--blue);
-  color: var(--white);
-}
-.details .recentOrders table tr td {
-  padding: 10px;
-}
-.details .recentOrders table tr td:last-child {
-  text-align: center;
-}
-.details .recentOrders table tr td:nth-child(2) {
+/* ====================== Customer Tabular Section ============================ */
+h2.main--title {
+  padding-bottom: 10px;
+  padding-top: 50px;
+  padding-left: 20px;
   text-align: left;
 }
-.details .recentOrders table tr td:nth-child(3) {
-  text-align: center;
-}
-.status.delivered {
-  padding: 2px 4px;
-  background: #8de02c;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.pending {
-  padding: 2px 4px;
-  background: #e9b10a;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.return {
-  padding: 2px 4px;
-  background: #f00;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.inProgress {
-  padding: 2px 4px;
-  background: #1795ce;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
+
+.customer .h2 {
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-.recentCustomers {
+.tabular--wrapper {
   position: relative;
+  overflow: auto;
   display: grid;
-  min-height: 500px;
-  padding: 20px;
+  /* min-height: 700px; */
   background: var(--white);
+  padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  margin-left: 10px;
 }
-.recentCustomers .imgBx {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  overflow: hidden;
-}
-.recentCustomers .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.recentCustomers table tr td {
-  padding: 12px 10px;
-}
-.recentCustomers table tr td h4 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2rem;
-}
-.recentCustomers table tr td h4 span {
-  font-size: 14px;
-  color: var(--black2);
-}
-.recentCustomers table tr:hover {
-  background: var(--blue);
-  color: var(--white);
-}
-.recentCustomers table tr:hover td h4 span {
-  color: var(--white);
 
+/* ================================== button tambah dan filter ================================== */
+.row-button { 
+  width: 100%;
+  height: 30px;
+}
+
+.left {
+  float: left;
+  display: block;
+}
+
+.right{
+  float: right;
+  display: block;
+}
+
+.row-button ul a {
+  padding: 10px;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #FFA500;
+  text-decoration: none;
+}
+
+.table-container {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+button{
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 15px;
+  color: #fff;
+  background: border-box;
+}
+
+td button:nth-child(1) {
+  background-color: #218100;
+}
+
+td button:nth-child(2) {
+  background-color: #B40000;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  background: orange;
+  color: #fff;
+  padding-top: 10px;
+}
+
+th {
+  padding: 15px;
+  text-align: center;
+}
+
+tbody {
+  background: #f2f2f2; 
+}
+
+td {
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tfoot {
+  background: rgba(113, 99, 186, 255);
+  font-weight: bold;
+  color: #fff;
+}
+
+tfoot td {
+  padding: 15px;
+  color: #fff;
+}
+
+.thead terakhir-pembelian {
+  position: center;
 }
 
 /* ====================== Responsive Design ========================== */
 @media (max-width: 991px) {
   .navigation {
-    left: -300px;
+    left:0;
   }
   .navigation.active {
     width: 300px;
